@@ -14,7 +14,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 DEPENDS += "bison-native flex-native"
 
-S = "${WORKDIR}/barebox-${PV}"
+S = "${WORKDIR}/sources-unpack/git"
 B = "${WORKDIR}/build"
 
 require conf/image-uefi.conf
@@ -107,7 +107,7 @@ barebox_do_compile () {
         unset CXXFLAGS
         unset MACHINE
         # Allow to use ${UNPACKDIR} in kconfig options to include additionally fetched files
-        export UNPACKDIR=${UNPACKDIR}
+        export UNPACKDIR=${UNPACKDIR}/git
         export KBUILD_OUTPUT="${B}/${defconfig}"
 
         if [ -d ${BAREBOX_ENV_DIR} ]; then
