@@ -14,7 +14,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 DEPENDS += "bison-native flex-native"
 
-S = "${WORKDIR}/barebox-${PV}"
+S = "${UNPACKDIR}/git"
 B = "${WORKDIR}/build"
 
 require conf/image-uefi.conf
