@@ -143,8 +143,8 @@ class BootimgPartitionPlugin(SourcePlugin):
                     fdt_dir = os.path.join(fdt_dir, os.path.dirname(dst))
                     break
 
-            if not kernel_name:
-                raise WicError('No kernel file found')
+            #if not kernel_name:
+            #    raise WicError('No kernel file found')
 
             # Compose the extlinux.conf
             extlinux_conf = "default Yocto\n"
